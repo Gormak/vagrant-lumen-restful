@@ -13,7 +13,7 @@ class Session extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'token', 'status'
+        'name', 'session_key', 'status'
     ];
 
     /**

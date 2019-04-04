@@ -75,4 +75,8 @@ class AuthController extends BaseController
             'error' => 'Email or password is wrong.'
         ], 400);
     }
+	
+	public function check(){
+		return response()->json(['check' => 'ok'], 200);
+	}
 }

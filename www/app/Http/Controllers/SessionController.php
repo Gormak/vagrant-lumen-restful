@@ -20,7 +20,20 @@ class SessionController extends Controller
 
     public function create(Request $request)
     {
-        $session = Session::create($request->all());
+        //$session = Session::create($request->all());
+		
+		$string = "";
+        $chaine = "SquadHealthCheckByAtecna123456789";
+        srand((double)microtime()*1000000);
+        for($i=0; $i<10; $i++){
+            $string .= $chaine[rand()%strlen($chaine)];
+        }
+		
+		$session = Session::create([
+            'name' => $request->input('name'),
+            'session_key' => $request->input('session_key', $string),
+            'status' => $request->input('status', '1'),
+        ]);
 
         return response()->json($session, 201);
     }

@@ -17,6 +17,12 @@ class SessionController extends Controller
     {
         return response()->json(Session::find($id));
     }
+	
+	public function showSessionWithToken($token)
+	{
+		$session = Session::where('token', $token);
+		return response()->json($session, 200);
+	}
 
     public function create(Request $request)
     {

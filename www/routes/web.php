@@ -24,6 +24,8 @@ $router->group(['prefix' => 'api/v1', 'middleware' => 'jwt.auth'], function () u
 
 	$router->get('sessions/{id}', ['uses' => 'SessionController@showOneSession', function() {$users = \App\User::all();return response()->json($users);}]);
 
+	$router->get('sessions/t/{token}', ['uses' => 'SessionController@showSessionWithToken', function() {$users = \App\User::all();return response()->json($users);}]);
+	
 	$router->post('sessions', ['uses' => 'SessionController@create', function() {$users = \App\User::all();return response()->json($users);}]);
 
 	$router->delete('sessions/{id}', ['uses' => 'SessionController@delete', function() {$users = \App\User::all();return response()->json($users);}]);

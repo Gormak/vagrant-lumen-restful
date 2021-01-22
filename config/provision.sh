@@ -4,7 +4,6 @@ DBNAME=api_shc
 DBUSER=root
 DBPASSWD=root
 
-sudo mkdir /home/vagrant/www
 sudo apt-get install -y curl apache2
 sudo apt-get install -y apt-transport-https lsb-release ca-certificates
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg

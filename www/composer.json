@@ -6,8 +6,8 @@
     "type": "project",
     "require": {
         "php": ">=7.1",
-        "laravel/lumen-framework": "5.7.*",
-        "vlucas/phpdotenv": "~2.2",
+        "laravel/lumen-framework": "5.8.*",
+        "vlucas/phpdotenv": "^3.3",
         "mpociot/laravel-apidoc-generator": "^3.3",
         "firebase/php-jwt": "^5.0"
     },

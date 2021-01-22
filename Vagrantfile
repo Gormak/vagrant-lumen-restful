@@ -9,9 +9,9 @@ Vagrant.configure("2") do |config|
   
   config.vm.provision :shell, path: "config/provision.sh"
   
-  config.vm.synced_folder "www/", "/home/vagrant/www"
+  config.vm.synced_folder "www/", "/home/vagrant-lumen-restful/www"
   
-  config.vm.synced_folder "config/", "/home/vagrant/config"
+  config.vm.synced_folder "config/", "/home/vagrant-lumen-restful/config"
   
   config.vm.provision :shell, path: "config/post_install.sh"
   

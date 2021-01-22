@@ -1,9 +1,5 @@
 #! /usr/bin/env bash
 
-DBNAME=api_shc
-DBUSER=root
-DBPASSWD=root
-
 sudo apt-get install -y curl apache2
 sudo apt-get install -y apt-transport-https lsb-release ca-certificates
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
@@ -17,6 +13,9 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 sudo apt-get install -y sqlite3
 
 #Save mysql-server / Debian Jessie64
+#DBNAME=api_shc
+#DBUSER=root
+#DBPASSWD=root
 #sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password $DBPASSWD"
 #sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $DBPASSWD"
 #sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/dbconfig-install boolean true"

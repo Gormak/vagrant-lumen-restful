@@ -14,7 +14,7 @@ sudo apt-get install -y php7.2 php7.2-opcache libapache2-mod-php7.2 php7.2-mysql
 sudo apt-get install -y php-curl php-mysql php-mbstring php-common php-xml php-zip
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
-#TODO MariaDB integration
+#TODO MariaDB or sqlite integration
 sudo apt-get install -y mariadb-server
 sudo mysql_secure_installation
 

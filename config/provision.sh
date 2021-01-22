@@ -14,10 +14,9 @@ sudo apt-get install -y php7.2 php7.2-opcache libapache2-mod-php7.2 php7.2-mysql
 sudo apt-get install -y php-curl php-mysql php-mbstring php-common php-xml php-zip
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
-#TODO MariaDB or sqlite integration
-sudo apt-get install -y mariadb-server
-sudo mysql_secure_installation
+sudo apt-get install -y sqlite3
 
+#Save mysql-server / Debian Jessie64
 #sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password $DBPASSWD"
 #sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $DBPASSWD"
 #sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/dbconfig-install boolean true"
@@ -29,4 +28,3 @@ sudo mysql_secure_installation
 
 #mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME CHARACTER SET utf8 COLLATE utf8_general_ci"
 #mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'localhost' identified by '$DBPASSWD'"
-

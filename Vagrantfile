@@ -4,7 +4,8 @@
 Vagrant.configure("2") do |config|
 
   config.vm.box = "debian/stretch64"
-  config.vm.network "private_network", type: "dhcp"
+  
+  config.vm.network "private_network", ip: "192.168.55.55"
   
   config.vm.provision :shell, path: "config/provision.sh"
   

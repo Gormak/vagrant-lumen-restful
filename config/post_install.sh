@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 echo "######################## MIGRATION #######################"
-cd /home/vagrant/www/
+cd /home/vagrant-lumen-restful/www/
 composer update
 php artisan migrate
 php artisan db:seed

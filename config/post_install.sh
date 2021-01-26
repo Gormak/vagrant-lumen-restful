@@ -1,6 +1,13 @@
 #! /usr/bin/env bash
+
+echo "######################## BDD #######################"
+DBNAME=shc_bdd
+DBUSER=homestead
+DBPASSWD=secret
+mysql -u$DBUSER -p$DBPASSWD -e "CREATE DATABASE $DBNAME CHARACTER SET utf8 COLLATE utf8_general_ci"
+
 echo "######################## MIGRATION #######################"
-cd /home/vagrant-lumen-restful/www/
+cd /home/vagrant/www/
 composer update
 php artisan migrate
 php artisan db:seed
